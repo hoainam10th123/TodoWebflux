@@ -1,0 +1,30 @@
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/todo_webflux_db_second
+    username: root
+    password: hoainam10th
+
+# flyway config
+  datasource:
+    url: jdbc:mysql://localhost:3306/todo_webflux_db_second
+    username: postgres
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    url: jdbc:mysql://localhost:3306/todo_webflux_db_second
+    user: root
+    password: hoainam10th
+
+  security:
+    user:
+      name: hoainam10th
+      password: 123456
+      roles: USER, ADMIN
+
+logging:
+  level:
+    root: INFO
+    web: DEBUG
