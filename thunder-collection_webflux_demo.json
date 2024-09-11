@@ -1,0 +1,285 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "webflux_demo",
+    "collectionId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+    "dateExported": "2024-09-11T10:31:34.330Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "885a2ba7-66e0-48fd-89be-cfb9f5dfd097",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "not found",
+            "url": "{{baseUrl}}/errors/not-found",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-08-24T11:59:59.910Z",
+            "modified": "2024-08-24T12:00:48.156Z",
+            "headers": []
+        },
+        {
+            "_id": "20233571-176b-4ea1-bfd4-6c1bad218e57",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "bad request",
+            "url": "{{baseUrl}}/errors/bad-request",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-08-24T12:01:55.230Z",
+            "modified": "2024-08-24T12:02:06.141Z",
+            "headers": []
+        },
+        {
+            "_id": "c223d2be-3463-43a6-a708-ae629cf1c343",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "unauthorized",
+            "url": "{{baseUrl}}/errors/unauthorized",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-08-24T12:02:45.798Z",
+            "modified": "2024-08-24T12:02:55.939Z",
+            "headers": []
+        },
+        {
+            "_id": "836be615-abe7-4126-816c-9346c2e76b41",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "forbidden",
+            "url": "{{baseUrl}}/errors/forbidden",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-08-24T12:03:21.979Z",
+            "modified": "2024-08-24T12:03:30.649Z",
+            "headers": []
+        },
+        {
+            "_id": "9cfb5d70-8ada-4f23-b9d8-af87f9d721b5",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "server-error",
+            "url": "{{baseUrl}}/errors/server-error",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-08-24T12:04:20.718Z",
+            "modified": "2024-08-24T12:04:31.123Z",
+            "headers": []
+        },
+        {
+            "_id": "91803820-8f7c-43f9-987e-1a7305955b89",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "add todo",
+            "url": "{{baseUrl}}/todos",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-08-24T12:08:55.334Z",
+            "modified": "2024-09-11T03:32:53.542Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"todo 6\",\n  \"description\": \"Mo ta 26 todo\",\n  \"completed\": true\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "8d629d8f-4e90-40c5-bc39-6083dc049910",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "login",
+            "url": "{{baseUrl}}/auth/login",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-09-07T10:50:51.681Z",
+            "modified": "2024-09-11T04:05:56.920Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"hoainam10th\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.token",
+                    "action": "setto",
+                    "value": "{{token}}"
+                }
+            ]
+        },
+        {
+            "_id": "42215e68-f3e7-4b5a-ba6d-1e101e4bc523",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "get current user",
+            "url": "{{baseUrl}}/user/current-user",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-09-08T02:20:42.043Z",
+            "modified": "2024-09-08T03:59:06.120Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "fa50028a-194d-4c16-92a0-7a60ddcf1541",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "get todos",
+            "url": "{{baseUrl}}/todos?pageNumber=1&pageSize=20&title=todo",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-09-08T05:53:05.346Z",
+            "modified": "2024-09-10T11:10:11.803Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "pageNumber",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "pageSize",
+                    "value": "20",
+                    "isPath": false
+                },
+                {
+                    "name": "title",
+                    "value": "todo",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "52894f21-207c-4806-a645-c427d78b85b8",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "get complete",
+            "url": "{{baseUrl}}/todos/get-completed?pageNumber=1&pageSize=10&completed=true",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-09-08T10:05:20.630Z",
+            "modified": "2024-09-09T03:39:21.259Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "pageNumber",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "pageSize",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "completed",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "1ad62fac-e77d-4490-8eea-295390bf99c2",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "get by id",
+            "url": "{{baseUrl}}/todos/1",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-09-09T03:52:09.764Z",
+            "modified": "2024-09-09T03:52:53.577Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "d0c58f92-4c7d-4a81-b435-c068b0e144b0",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "update todo",
+            "url": "{{baseUrl}}/todos/10",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2024-09-09T03:53:03.253Z",
+            "modified": "2024-09-11T03:32:46.475Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"update todo with id 27\",\n  \"description\": \"Mo ta 2 update\",\n  \"completed\": false\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "d65e6d73-9700-4fd0-b5b6-9f37f393d552",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "delete by id",
+            "url": "{{baseUrl}}/todos/8",
+            "method": "DELETE",
+            "sortNum": 150000,
+            "created": "2024-09-09T04:32:35.928Z",
+            "modified": "2024-09-11T04:04:11.552Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "fe68c79f-37ce-4d3e-acb3-0c951013cce0",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "validate",
+            "url": "{{baseUrl}}/errors/validation",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2024-09-09T05:53:22.999Z",
+            "modified": "2024-09-09T05:55:46.467Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"\",\n  \"password\": \"\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c338530d-8542-4e22-8118-6c0e4c2e5284",
+            "colId": "1c28b46f-7ff3-487b-a3fc-af2f873beae9",
+            "containerId": "",
+            "name": "get current user other",
+            "url": "{{baseUrl}}/user/other-user",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2024-09-10T11:12:31.450Z",
+            "modified": "2024-09-10T11:13:04.787Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        }
+    ],
+    "ref": "6HyOPbCLdu0s1IBFw2oYKrhhaRyGYv-g0GxtnWoxq-5Uz3h863MDAJUE7TrqnH9VXSrrzer4x4vlcdA4vmIfAg"
+}
